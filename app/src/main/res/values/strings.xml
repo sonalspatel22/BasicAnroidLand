@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">ReesGuru</string>
+    <string name="str_app_name">ReEs Guru</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="font_roboto_regular">fonts/Roboto-Regular.ttf</string>
+    <string name="font_roboto_light">fonts/Roboto-Light.ttf</string>
+    <string name="font_roboto_light_italic">fonts/Roboto-Light-Italic.ttf</string>
+    <string name="font_roboto_medium">fonts/Roboto-Medium.ttf</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCkmSNPt5PaEFl7q_Wv_wKpTTVAI-sNlhk</string>
+
+    <string-array name="unitprice">
+
+        <item>US Dollar (USD)</item>
+        <item>United Arab Emirates Dirham (AED)</item>
+        <item>British Pound Sterling (GBP)</item>
+        <item>Euro (EUR)</item>
+        <item>South African Rand (ZAR)</item>
+        <item>Zambian Kwacha (ZMW)</item>
+    </string-array>
+
+
+    <string-array name="CoverUnit">
+        <item>Sqfeet</item>
+        <item>SqMeter</item>
+        <item>SqYards</item>
+        <item>Acers</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="str_contactdetail">Contact Detail</string>
+    <string name="str_agentdetail">Agent Detail</string>
+    <string name="str_associates">Associates</string>
+    <string name="str_call">Call</string>
+    <string name="str_map">Map</string>
+    <string name="str_addreview">Add review</string>
+    <string name="str_nearbylistname">Name</string>
+    <string name="str_nearbylistkm">km</string>
+
+    //MainActivityfooter
+    <string name="str_listing">Listing</string>
+    <string name="str_agent">Agents</string>
+    <string name="str_mymatches">My Matches</string>
+    <string name="str_nearby">Near By</string>
+    <string name="str_supplier">Supplier</string>
+
+    //Activityname
+    <string name="str_gallary">Gallery</string>
+    <string name="str_filter">Filter</string>
+    <string name="str_allreviews">All Reviews</string>
+    <string name="str_searchjoints">Search Joints</string>
+
+    //empty layout
+    <string name="str_emptylayout">No more items to show</string>
+
+    //propertyDetailActivity
+    <string name="str_propertydetail">property detail</string>
+    <string name="str_propertyfeature">Property Feature</string>
+    <string name="str_summary">Summary</string>
+    <string name="str_location">Location</string>
+    <string name="str_similerhomesforsale">Similer Homes For Sale</string>
+    <string name="str_contactagent">Contact Agent</string>
+
+    //SupplierDetailActivity
+    <string name="str_supplierdetail">Supplier Detail</string>
+    <string name="str_openingtime">Opening Time</string>
+    <string name="str_closingtime">Closing Time</string>
+    <string name="str_weekdays">Week Days</string>
+    <string name="str_openingclosingctime">Opening &amp; Closing Time</string>
+    <string name="str_products">Products</string>
+    <string name="str_discountandpromotions">Discount And Promotions</string>
+    //days//
+    <string name="str_monday">Mon</string>
+    <string name="str_tuesday">Tue</string>
+    <string name="str_wednesday">Wed</string>
+    <string name="str_thursday">Thu</string>
+    <string name="str_friday">Fri</string>
+    <string name="str_saturday">Sat</string>
+    <string name="str_sunday">Sun</string>
+    <string name="str_holiday">Holiday</string>
+
+    //AllReviews
+    <string name="str_quality">Quality</string>
+    <string name="str_service">Service</string>
+    <string name="str_convenience">Conveyance</string>
+
+    //dialogcalllist
+    <string name="str_calllist">Tap a Number to Call</string>
+
+    //dialogloading
+    <string name="str_loading">Loading...</string>
+
+    //filter
+    <string name="str_forbuy">For Buy</string>
+    <string name="str_forrent">For Rent</string>
+    <string name="str_Projects">Projects</string>
+    <string name="str_openhouse">Open House</string>
+    <string name="str_propertytype">Property type</string>
+    <string name="str_commercial">Commercial</string>
+    <string name="str_resident">Resident</string>
+    <string name="str_bedrooms">Bedrooms</string>
+    <string name="str_bathrooms">Bathrooms</string>
+    <string name="str_any">Any</string>
+    <string name="str_1">1+</string>
+    <string name="str_2">2+</string>
+    <string name="str_3">3+</string>
+    <string name="str_4">4+</string>
+    <string name="str_pricerange">Price Range</string>
+    <string name="str_min">Min</string>
+    <string name="str_max">Max</string>
+    <string name="str_priceunit">Price Unit</string>
+    <string name="str_coverarea">Cover Area</string>
+    <string name="str_mincoverArea">Min CoverArea</string>
+    <string name="str_maxcoverArea">Max CoverArea</string>
+    <string name="str_coverareaunittype">Cover Area Unit type</string>
+    <string name="str_plotarea">Plot Area</string>
+    <string name="str_minplotarea">Min Plot Area</string>
+    <string name="str_maxplotarea">Max Plot Area</string>
+    <string name="str_plotareaunittype">Plot Area Unit type</string>
+    <string name="str_possession">Possession</string>
+    <string name="str_underconstruction">Under Construction</string>
+    <string name="str_ready">Ready</string>
+    <string name="str_both">Both</string>
+    <string name="str_transactiontype">Transaction Type</string>
+    <string name="str_new">New</string>
+    <string name="str_resale">Resale</string>
+    <string name="str_savesearch">Save Search</string>
+    <string name="str_apply">Apply</string>
+    <string name="str_clear">Clear</string>
+    <string name="str_cityzip">City/Zip</string>
+    <string name="str_cancel">Cancel</string>
+    <string name="str_draw">Draw</string>
+
+    //Addagentreview|_dialog
+
+    <string name="str_rateus">Rate us</string>
+    <string name="str_addcommnet">Add Comment</string>
+    <string name="str_send">Send</string>
+
+    <string name="str_toast">Toast</string>
+
+
+    //Navigationdraweritems
+    <string name="str_aboutus">About us</string>
+
+    //loginsignup
+    <string name="str_email">Email</string>
+    <string name="str_login">Login</string>
+    <string name="str_signup">Sign Up</string>
+    <string name="str_name">Name</string>
+    <string name="str_displayname">DisplayName</string>
+    <string name="str_male">Male</string>
+    <string name="str_female">Female</string>
+    <string name="str_mobileno">Mobile No</string>
+    <string name="str_password">Password</string>
+    <string name="str_confirmpassword">Confirm Password</string>
+
+    <string name="password_lenght_hint">
+        Password must contain at least 6 characters.
+    </string>
+
+
+</resources>

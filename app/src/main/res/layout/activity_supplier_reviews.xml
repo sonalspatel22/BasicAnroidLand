@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.land.SupplierReviewsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTintMode="src_over"
+                android:textAlignment="center" />
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/str_allreviews"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:font="@string/font_roboto_medium" />
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.land.custom.RobotoTextView
+            android:id="@+id/txt_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            app:font="@string/font_roboto_medium" />
+
+        <!-- android:text="3.4"-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_quality"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="center|right"
+                    android:text="@string/str_quality"
+                    android:textSize="12sp"
+                    app:font="@string/font_roboto_medium" />
+
+                <ProgressBar
+                    android:id="@+id/pro_quality"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/txt_quality_count"
+                    android:layout_toRightOf="@+id/txt_quality"
+                    android:indeterminateTint="@color/black"
+                    android:progressBackgroundTint="@color/black"
+                    android:progressTint="@color/colorPrimary" />
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_quality_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:textSize="12sp"
+                    app:font="@string/font_roboto_medium" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_service"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_service_count"
+                    android:layout_alignBottom="@+id/txt_service_count"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="center|right"
+                    android:text="@string/str_service"
+                    android:textSize="12sp"
+                    app:font="@string/font_roboto_medium" />
+
+                <ProgressBar
+                    android:id="@+id/pro_service"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/txt_service_count"
+                    android:layout_toRightOf="@+id/txt_service"
+                    android:indeterminateTint="@color/black"
+                    android:progressBackgroundTint="@color/black"
+                    android:progressTint="@color/colorPrimary" />
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_service_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:textSize="12sp"
+                    app:font="@string/font_roboto_medium" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_convenience"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="center|right"
+                    android:text="@string/str_convenience"
+                    android:textSize="12sp"
+                    app:font="@string/font_roboto_medium" />
+
+                <ProgressBar
+                    android:id="@+id/pro_convenience"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/txt_convenience_count"
+                    android:layout_toRightOf="@+id/txt_convenience"
+                    android:indeterminateTint="@color/black"
+                    android:progressBackgroundTint="@color/black"
+                    android:progressTint="@color/colorPrimary" />
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_convenience_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:textSize="12sp"
+                    app:font="@string/font_roboto_medium" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.land.custom.RobotoTextView
+        android:id="@+id/txt_base_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:gravity="center|left"
+        android:textSize="18sp"
+        app:font="@string/font_roboto_medium" />
+
+    <!-- android:text="Based on 4 Reviews"-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

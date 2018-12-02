@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.land.PropertyDetailActivity">
+
+    <include layout="@layout/toolbarlayout"></include>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <LinearLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:id="@+id/txt_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            app:font="@string/font_roboto_regular" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transperent_black_dark"
+                            android:elevation="4dp">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/vpgallery"
+                                android:layout_width="match_parent"
+                                android:layout_height="180dp"
+                                android:elevation="6dp">
+
+                            </android.support.v4.view.ViewPager>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="7dp">
+
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="4dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="2dp"
+                                        android:background="@color/colorPrimary">
+
+                                        <com.land.custom.RobotoTextView
+                                            android:id="@+id/rtv_imagenumber"
+                                            android:layout_width="40dp"
+                                            android:layout_height="25dp"
+                                            android:background="@color/colorWhite"
+                                            android:gravity="center"
+                                            android:textColor="@color/colorBlack" />
+                                    </LinearLayout>
+                                </android.support.v7.widget.CardView>
+                            </LinearLayout>
+
+                            <com.land.custom.RobotoTextView
+                                android:id="@+id/txt_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/icn_price_lbl"
+                                android:elevation="7dp"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"
+                                app:font="@string/font_roboto_regular" />
+                        </RelativeLayout>
+
+
+                        <com.land.custom.RobotoTextView
+                            android:id="@+id/txt_property_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/str_propertydetail"
+                            app:font="@string/font_roboto_regular" />
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_pfeature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:id="@+id/tv_pfeatures"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/str_propertyfeature"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            app:font="@string/font_roboto_regular" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|center"
+                            android:orientation="horizontal"
+                            android:weightSum="6">
+
+                            <LinearLayout
+                                android:id="@+id/table_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/table_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/table_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/str_summary"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            app:font="@string/font_roboto_regular" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:visibility="visible"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.land.custom.RobotoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/str_location"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                app:font="@string/font_roboto_regular" />
+
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/img_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mapholder" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:id="@+id/tv_similerhomesforsale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            app:font="@string/font_roboto_regular" />
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/black_with_op" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <com.land.custom.RobotoTextView
+                        android:id="@+id/tvcontactagent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/icn_agents_white"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/str_contactagent"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20dp"
+                        app:font="@string/font_roboto_regular" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.design.widget.CoordinatorLayout>

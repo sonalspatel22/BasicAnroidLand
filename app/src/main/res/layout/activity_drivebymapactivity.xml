@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.land.Drivebymapactivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbarlayout"></include>
+
+        <RelativeLayout
+            android:id="@+id/drivebylayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/viewpager"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/drivebymap"
+                class="com.land.fragment.MySupportMapFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/viewpager"
+                android:layout_alignParentTop="true" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_alignParentBottom="true">
+
+            </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/reesmap_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

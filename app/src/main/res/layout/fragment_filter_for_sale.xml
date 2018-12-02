@@ -1,0 +1,968 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.land.fragment.FilterForSaleFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:theme="@style/MyToolbarTheme">
+
+                </android.support.v7.widget.Toolbar>
+
+                <com.land.custom.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:text="@string/str_filter"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    app:font="@string/font_roboto_regular" />
+
+                <ImageView
+                    android:id="@+id/refresh"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_refresh" />
+
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llbuttons"
+            android:layout_below="@+id/app_bar">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableLeft="@drawable/icn_buy_locpin"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_forbuy"
+                            android:textSize="@dimen/font_medium"
+                            app:font="@string/font_roboto_regular" />
+
+                        <Switch
+                            android:id="@+id/sw_buy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:thumbTint="@color/buy_color"
+                            android:trackTint="@color/buy_switch_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableLeft="@drawable/icn_rent_locpin"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_forrent"
+                            android:textSize="@dimen/font_medium"
+                            app:font="@string/font_roboto_regular" />
+
+                        <Switch
+                            android:id="@+id/sw_rent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:thumbTint="@color/rent_color"
+                            android:trackTint="@color/rent_switch_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableLeft="@drawable/icn_prjct_locpin"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_Projects"
+                            android:textSize="@dimen/font_medium"
+                            app:font="@string/font_roboto_regular" />
+
+                        <Switch
+                            android:id="@+id/sw_project"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:thumbTint="@color/project_color"
+                            android:trackTint="@color/project_switch_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical">
+
+                        <com.land.custom.RobotoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableLeft="@drawable/icn_openhouse_locpin"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_openhouse"
+                            android:textSize="@dimen/font_medium"
+                            app:font="@string/font_roboto_regular" />
+
+                        <Switch
+                            android:id="@+id/sw_open_house"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:thumbTint="@color/openhouse_color"
+                            android:trackTint="@color/open_house_switch_color" />
+
+                    </RelativeLayout>
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_propertytype"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        app:font="@string/font_roboto_regular" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <CheckBox
+                            android:id="@+id/chk_Commercial"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:button="@null"
+                            android:drawableTop="@drawable/selector_propertytype_comercial"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_commercial"
+                            android:textColor="@drawable/tab_text" />
+
+
+                        <CheckBox
+                            android:id="@+id/chk_resident"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/chk_Commercial"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:button="@null"
+                            android:drawableTop="@drawable/selector_propertytype_resident"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_resident"
+                            android:textColor="@drawable/tab_text" />
+                    </RelativeLayout>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_bedrooms"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|top"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardCornerRadius="5dp">
+
+
+                        <RadioGroup
+                            android:id="@+id/rdg_bed_roomes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_any"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_any"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_1"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_2"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_3"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_4"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                        </RadioGroup>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_bathrooms"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|top"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardCornerRadius="5dp">
+
+
+                        <RadioGroup
+                            android:id="@+id/rdg_bathrooms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_any_bath"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_any"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_1_bath"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_1"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_2_bath"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_2"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_3_bath"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_3"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_overlay" />
+
+                            <com.land.custom.RobotoRadioButton
+                                android:id="@+id/radio_4_bath"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_bedroomes"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/str_4"
+                                android:textColor="@drawable/tab_text_bedrooms"
+                                app:font="@string/font_roboto_regular" />
+
+                        </RadioGroup>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_pricerange"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+
+                    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                        android:id="@+id/rangeSeekbarPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        app:bar_color="@color/orange_color"
+                        app:bar_highlight_color="@color/colorBlack"
+                        app:corner_radius="5"
+                        app:data_type="_integer"
+
+                        app:gap="10000"
+                        app:left_thumb_color="@color/orange_color"
+                        app:left_thumb_color_pressed="@color/orange_color"
+                        app:left_thumb_image="@drawable/icn_range_slider"
+                        app:max_value="1000000"
+                        app:min_value="10000"
+                        app:right_thumb_color="@color/orange_color"
+                        app:right_thumb_color_pressed="@color/orange_color"
+                        app:right_thumb_image="@drawable/icn_range_slider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.land.custom.RobotoTextView
+                            android:id="@+id/txt_min_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/str_min"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/font_medium"
+                            android:textStyle="bold"
+                            app:font="@string/font_roboto_regular" />
+
+                        <com.land.custom.RobotoTextView
+                            android:id="@+id/txt_max_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/str_max"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/font_medium"
+                            android:textStyle="bold"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RelativeLayout>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_priceunit"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/rounded_border_textview"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner_price_unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:entries="@array/unitprice"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_coverarea"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/min_cover_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_border_textview"
+                            android:hint="@string/str_mincoverArea"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="10dp"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/max_cover_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_border_textview"
+                            android:hint="@string/str_maxcoverArea"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="10dp"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_coverareaunittype"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/rounded_border_textview"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner_cover_unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:entries="@array/CoverUnit"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_plotarea"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/min_plot_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_border_textview"
+                            android:hint="@string/str_minplotarea"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="10dp"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/max_plot_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_border_textview"
+                            android:hint="@string/str_maxplotarea"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="10dp"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_plotareaunittype"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/rounded_border_textview"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner_plot_unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:entries="@array/CoverUnit"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_possession"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:font="@string/font_roboto_regular" />
+
+
+                    <RadioGroup
+                        android:id="@+id/rdg_possession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_under_construction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_underconstruction"
+                            app:font="@string/font_roboto_regular" />
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_ready"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_ready"
+                            app:font="@string/font_roboto_regular" />
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_both"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_both"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RadioGroup>
+
+
+                    <com.land.custom.RobotoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="3dp"
+                        android:text="@string/str_transactiontype"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+
+                    <RadioGroup
+                        android:id="@+id/rdg_transaction_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_new"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_new"
+                            app:font="@string/font_roboto_regular" />
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_resale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_resale"
+                            app:font="@string/font_roboto_regular" />
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_both_transaction_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_both"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/llbuttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llsaveapply"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/tv_savesearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="15dp"
+                    android:text="@string/str_savesearch"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/tv_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="15dp"
+                    android:text="@string/str_apply"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llapply"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/tv_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                    android:text="@string/str_apply"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

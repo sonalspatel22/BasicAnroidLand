@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/txt_rentorsale"
+                    android:background="@null"
+                    android:lines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/colorPrimary"
+                    app:font="@string/font_roboto_regular" />
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_rentorsale"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/colorPrimary"
+                    app:font="@string/font_roboto_regular" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/property_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder" />
+
+                <com.land.custom.RobotoTextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/property_image"
+                    android:background="@drawable/icn_price_lbl"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    app:font="@string/font_roboto_regular" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.land.custom.RobotoTextView
+                        android:id="@+id/txt_bed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icn_bedrooms"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.land.custom.RobotoTextView
+                        android:id="@+id/txt_Bathroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icn_bathroom_listdtl"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.land.custom.RobotoTextView
+                        android:id="@+id/txt_property_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icnlisting_squre_area"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

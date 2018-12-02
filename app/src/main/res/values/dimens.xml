@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="navigation_drawer_height">150dp</dimen>
+
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+
+    <dimen name="padding_large">10dp</dimen>
+    <dimen name="padding_medium">4dp</dimen>
+    <dimen name="padding_small">10dp</dimen>
+
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_medium">14sp</dimen>
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_small_one">12sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="button_medium">35dp</dimen>
+    <dimen name="button_small">25dp</dimen>
+</resources>

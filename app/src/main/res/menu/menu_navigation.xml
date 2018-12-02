@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/forrent"
+            android:title="For Rent" />
+        <item
+            android:id="@+id/searchallhomes"
+            android:title="Search All Homes" />
+        <item
+            android:id="@+id/findanagent"
+            android:title="Find An Agent" />
+
+        <item
+            android:id="@+id/recentlyviewed"
+            android:title="Recently Viewed" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/savedhomes"
+            android:title="Saved Homes" />
+        <item
+            android:id="@+id/savedsearch"
+            android:title="Saved Search" />
+
+        <item
+            android:id="@+id/yourhome"
+            android:title="Your Home" />
+        <item
+            android:id="@+id/null1"
+            android:title="" />
+
+        <item
+            android:id="@+id/signinregister"
+            android:title="Sign In/Register" />
+        <item
+            android:id="@+id/setting"
+            android:title="Setting" />
+
+    </group>
+
+</menu>

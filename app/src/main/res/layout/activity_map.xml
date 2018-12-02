@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.land.NearbyPlacesMapActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbarlayout" />
+
+    <fragment
+        android:id="@+id/map"
+        class="com.land.fragment.MySupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fbtn_list"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/ll"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icn_list"
+        app:backgroundTint="@color/colorPrimary" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transperent_black">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lllist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorWhite"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivdownlist"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/offwhite"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/ivlogoplace"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:paddingLeft="15dp"
+                android:text="@string/str_nearbylistname"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tvdistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:paddingLeft="5dp"
+                android:text="@string/str_nearbylistkm"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/black_overlay"></View>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        </ListView>
+
+    </LinearLayout>
+
+</RelativeLayout>

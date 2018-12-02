@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#076cba</color>
+    <color name="colorPrimaryDark">#076cba</color>
+    <color name="colorPrimarytransperent">#9760a7d5</color>
+    <color name="colorAccent">#353535</color>
+
+    <color name="gray_with_op">#33637582</color>
+    <color name="colorBlack">#000000</color>
+    <color name="transperent">#00000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhitetransperent">#98fefefe</color>
+    <color name="listingbg">#cbfefefe</color>
+    <color name="offwhite">#FFCAE0EF</color>
+    <color name="transperent_black">#ce000000</color>
+    <color name="transperent_black_dark">#c5000000</color>
+    <color name="black_with_op">#95000000</color>
+    <color name="black_bg_loginsignup">#c7000000</color>
+    <color name="white_text_loginsignup">#d3ffffff</color>
+    <color name="black_overlay">#909194</color>
+    <color name="black_overlay_dark">#67686b</color>
+
+    <color name="summery_item_dark">#f3f3f3</color>
+    <color name="summery_item_light">#ebebeb</color>
+    <color name="gray">#AEAAAC</color>
+    <color name="gray_light">#d3d3d3</color>
+    <color name="blackgray">#434343</color>
+    #6fc827
+    <color name="txtcolor_gray">#90908f</color>
+    //checkbox color
+    <color name="orange_color">#e8830b</color>
+    <color name="buy_color">#e8830b</color>
+    <color name="rent_color">#27c6c8</color>
+    <color name="project_color">#ea3351</color>
+    <color name="openhouse_color">#6fc827</color>
+    <color name="agents_color">#60a7d4</color>
+
+    <color name="black">#22252B</color>
+    <color name="white">#fefefe</color>
+
+</resources>

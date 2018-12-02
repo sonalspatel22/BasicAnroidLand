@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.land.fragment.NavigationDrawerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="130dp">
+
+            <ImageView
+                android:id="@+id/imageView_nav_bg"
+                android:layout_width="@dimen/navigation_drawer_width"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icn_list_dtl_area" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/nav_listing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icn_listing_slidr"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/str_listing"
+                android:textColor="@drawable/tab_text"
+                android:textSize="18dp"
+                app:font="@string/font_roboto_regular" />
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="@dimen/margin_large"-->
+            <!--android:background="@color/gray_with_op" />-->
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/nav_agent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icn_agents_slidr"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/str_agent"
+                android:textColor="@drawable/tab_text"
+                android:textSize="18dp"
+                app:font="@string/font_roboto_regular" />
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="@dimen/margin_large"-->
+            <!--android:background="@color/gray_with_op" />-->
+
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/nav_nearby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icn_nearby_slidr"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/str_nearby"
+                android:textColor="@drawable/tab_text"
+                android:textSize="18dp"
+                app:font="@string/font_roboto_regular" />
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="@dimen/margin_large"-->
+            <!--android:background="@color/gray_with_op" />-->
+
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/nav_mymatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icn_mymatches_slidr"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/str_mymatches"
+                android:textColor="@drawable/tab_text"
+                android:textSize="18dp"
+                app:font="@string/font_roboto_regular" />
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="@dimen/margin_large"-->
+            <!--android:background="@color/gray_with_op" />-->
+
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/nav_supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icn_supplier_slidr"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/str_supplier"
+                android:textColor="@drawable/tab_text"
+                android:textSize="18dp"
+                app:font="@string/font_roboto_regular" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/nav_aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icn_about_slidr"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/str_aboutus"
+                android:textColor="@drawable/tab_text"
+                android:textSize="18dp"
+                app:font="@string/font_roboto_regular" />
+
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="@dimen/margin_large"-->
+            <!--android:background="@color/gray_with_op" />-->
+
+
+            <com.land.custom.RobotoTextView
+                android:id="@+id/nav_signinregister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icn_signin_slidr"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:text="Sign In/Register"
+                android:textColor="@drawable/tab_text"
+                android:textSize="18dp"
+                app:font="@string/font_roboto_regular" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

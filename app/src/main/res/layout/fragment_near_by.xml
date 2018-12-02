@@ -1,0 +1,217 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.land.fragment.NearByFragment">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.land.fragment.MySupportMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@+id/fram_map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/filter_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhitetransperent"
+        android:gravity="center_vertical"
+        android:padding="5dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_serch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="@string/str_cityzip"
+            android:paddingLeft="10dp" />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_user_define_pin"
+            android:padding="7dp"
+            android:src="@drawable/icn_search" />
+
+        <ImageView
+            android:id="@+id/img_free_draw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:padding="7dp"
+            android:src="@drawable/icn_draw_loc" />
+
+        <ImageView
+            android:id="@+id/img_user_define_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_free_draw"
+            android:padding="7dp"
+            android:src="@drawable/icn_curr_loc" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/draw_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite"
+        android:padding="5dp"
+        android:visibility="gone">
+
+
+        <com.land.custom.RobotoTextView
+            android:id="@+id/txt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:text="@string/str_cancel"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:font="@string/font_roboto_regular" />
+
+        <com.land.custom.RobotoTextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:text="@string/str_draw"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:font="@string/font_roboto_regular" />
+
+        <com.land.custom.RobotoTextView
+            android:id="@+id/txt_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingRight="10dp"
+            android:text="@string/str_apply"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:font="@string/font_roboto_regular" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:paddingBottom="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- <android.support.design.widget.FloatingActionButton
+                 android:id="@+id/fab_filter"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginBottom="@dimen/margin_medium"
+                 android:layout_marginRight="@dimen/margin_medium"
+                 android:layout_marginTop="@dimen/margin_medium"
+                 android:scaleType="center"
+                 android:src="@drawable/icn_filter"
+                 app:backgroundTint="@color/colorPrimary" />-->
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_listing"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:scaleType="center"
+                android:src="@drawable/icn_listview"
+                app:backgroundTint="@color/colorPrimary" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_map_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:scaleType="center"
+                android:src="@drawable/icn_sateliteview"
+                app:backgroundTint="@color/colorPrimary" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_drive_mode"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:scaleType="center"
+                android:src="@drawable/icn_drive_loc"
+                app:backgroundTint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.land.custom.RobotoTextView
+        android:id="@+id/txt_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/str_clear"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:font="@string/font_roboto_regular" />
+
+
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_gravity="bottom"
+        android:background="@color/black_with_op"
+        android:visibility="gone" />
+
+
+    <ProgressBar
+        android:id="@+id/reesmap_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+
+</FrameLayout>

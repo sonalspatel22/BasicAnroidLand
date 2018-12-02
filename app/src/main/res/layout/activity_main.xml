@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.land.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:id="@+id/layout_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:textAlignment="center"
+                        app:theme="@style/MyToolbarTheme" />
+
+                    <com.land.custom.RobotoTextView
+                        android:id="@+id/txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:text="@string/str_app_name"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:font="@string/font_roboto_regular" />
+
+                    <ImageView
+                        android:id="@+id/ivfilter"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icn_filtr_white"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/search_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:visibility="gone"
+                        app:theme="@style/MySearchToolbarTheme" />
+
+
+                </FrameLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/dashbord_tab"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/dashbord_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/padding_small"
+                    android:weightSum="5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_dashboard_listing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_listing"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_listing"
+                            android:textColor="@drawable/tab_text"
+                            android:textSize="@dimen/font_small"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_dashboard_agent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_agents"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_agent"
+                            android:textColor="@drawable/tab_text"
+                            android:textSize="@dimen/font_small"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_dashboard_near_by"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableTop="@drawable/ic_near_by"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_nearby"
+                            android:textColor="@drawable/tab_text"
+                            android:textSize="@dimen/font_small"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_dashboard_matches"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_my_matches"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_mymatches"
+                            android:textColor="@drawable/tab_text"
+                            android:textSize="@dimen/font_small"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <com.land.custom.RobotoRadioButton
+                            android:id="@+id/radio_dashboard_supplier"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_supplier"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/str_supplier"
+                            android:textColor="@drawable/tab_text"
+                            android:textSize="@dimen/font_small"
+                            app:font="@string/font_roboto_regular" />
+
+                    </RelativeLayout>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/navigation_drawer"
+            android:name="com.land.fragment.NavigationDrawerFragment"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            tools:layout="@layout/fragment_navigation_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</android.support.design.widget.CoordinatorLayout>

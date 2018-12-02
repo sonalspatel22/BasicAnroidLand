@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.land.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="25dp"
+                android:src="@drawable/icn_logo_cont" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black_bg_loginsignup"
+                    android:gravity="top"
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp">
+
+                    <com.land.custom.RobotoEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/black_overlay"
+                        android:drawableRight="@drawable/icn_user"
+                        android:hint="@string/str_name"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/white_text_loginsignup"
+                        app:font="@string/font_roboto_light" />
+
+                    <com.land.custom.RobotoEditText
+                        android:id="@+id/et_displayname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/black_overlay"
+                        android:drawableRight="@drawable/icn_user"
+                        android:hint="@string/str_displayname"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/white_text_loginsignup"
+                        app:font="@string/font_roboto_light" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <com.land.custom.RobotoEditText
+                            android:id="@+id/et_country_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black_overlay"
+                            android:focusable="false"
+                            android:fontFamily="@string/font_roboto_light"
+                            android:hint="Code"
+                            android:inputType="none"
+                            android:maxEms="5"
+                            android:minEms="5"
+                            android:textColor="@color/colorWhite"
+                            android:textColorHint="@color/white_text_loginsignup"
+                            app:font="@string/font_roboto_light" />
+
+                        <com.land.custom.RobotoEditText
+                            android:id="@+id/et_mobileno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black_overlay"
+                            android:drawableRight="@drawable/icn_mobile"
+                            android:fontFamily="@string/font_roboto_light"
+                            android:hint="@string/str_mobileno"
+                            android:inputType="phone"
+                            android:lines="1"
+                            android:textColor="@color/colorWhite"
+                            android:textColorHint="@color/white_text_loginsignup"
+                            app:font="@string/font_roboto_light" />
+                    </LinearLayout>
+
+                    <com.land.custom.RobotoEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/black_overlay"
+                        android:drawableRight="@drawable/icn_email"
+                        android:hint="@string/str_email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/white_text_loginsignup"
+                        app:font="@string/font_roboto_light" />
+
+                    <com.land.custom.RobotoEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/black_overlay"
+                        android:drawableRight="@drawable/icn_password"
+                        android:hint="@string/str_password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/white_text_loginsignup"
+                        app:font="@string/font_roboto_light" />
+
+                    <com.land.custom.RobotoEditText
+                        android:id="@+id/et_confirmpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/black_overlay"
+                        android:drawableRight="@drawable/icn_password"
+                        android:hint="@string/str_confirmpassword"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/white_text_loginsignup"
+                        app:font="@string/font_roboto_light" />
+
+                    <com.land.custom.RobotoTextView
+                        android:id="@+id/tv_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_loginsignup_button"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="30dp"
+                        android:paddingBottom="3dp"
+                        android:text="Sign Up"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
